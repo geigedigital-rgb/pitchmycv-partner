@@ -725,13 +725,23 @@
         .cta-section {
             background: var(--text-primary);
             color: white;
-            text-align: center;
             padding: 80px 0;
         }
 
-        .cta-content {
-            max-width: 700px;
+        .cta-layout {
+            display: grid;
+            grid-template-columns: minmax(0, 1fr) minmax(220px, 360px);
+            gap: 48px 56px;
+            align-items: center;
+            max-width: 1040px;
             margin: 0 auto;
+        }
+
+        .cta-text {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            text-align: left;
         }
 
         .cta-section h2 {
@@ -740,10 +750,38 @@
             font-weight: 800;
         }
 
-        .cta-section p {
+        .cta-lead {
             font-size: 18px;
-            margin-bottom: 40px;
+            margin: 0 0 20px;
             opacity: 0.9;
+            line-height: 1.6;
+        }
+
+        .cta-promo {
+            font-size: 16px;
+            font-weight: 500;
+            margin: 0 0 32px;
+            color: rgba(255, 255, 255, 0.88);
+            line-height: 1.5;
+            max-width: 520px;
+        }
+
+        .cta-promo strong {
+            color: #a8bfff;
+            font-weight: 800;
+        }
+
+        .cta-visual {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .cta-visual img {
+            width: 100%;
+            max-width: 340px;
+            height: auto;
+            display: block;
         }
 
         .btn-white {
@@ -804,6 +842,28 @@
 
             .stat-number {
                 font-size: 36px;
+            }
+
+            .cta-layout {
+                grid-template-columns: 1fr;
+                gap: 40px;
+            }
+
+            .cta-text {
+                align-items: center;
+                text-align: center;
+            }
+
+            .cta-promo {
+                max-width: none;
+            }
+
+            .cta-visual img {
+                max-width: 280px;
+            }
+
+            .cta-section h2 {
+                font-size: 32px;
             }
         }
 
@@ -1320,15 +1380,21 @@
     <!-- CTA -->
     <section class="cta-section">
         <div class="container">
-            <div class="cta-content">
-                <h2>Ready to Start Earning?</h2>
-                <p>Join career experts who monetize their recommendations without compromising reputation.</p>
-                <a href="https://my.pitchcv.app/" class="btn btn-white">
-                    Apply for Partnership
-                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
-                        <path d="M7.5 15L12.5 10L7.5 5" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
-                    </svg>
-                </a>
+            <div class="cta-layout">
+                <div class="cta-text">
+                    <h2>Ready to Start Earning?</h2>
+                    <p class="cta-lead">Join career experts who monetize their recommendations without compromising reputation.</p>
+                    <p class="cta-promo">Every new partner gets <strong>+$20</strong> credited to their partner account.</p>
+                    <a href="https://my.pitchcv.app/" class="btn btn-white">
+                        Apply for Partnership
+                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                            <path d="M7.5 15L12.5 10L7.5 5" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                        </svg>
+                    </a>
+                </div>
+                <div class="cta-visual">
+                    <img src="Group.svg" width="383" height="367" alt="PitchCV partner program illustration">
+                </div>
             </div>
         </div>
     </section>
