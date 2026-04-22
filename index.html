@@ -721,6 +721,54 @@
             max-height: 500px;
         }
 
+        /* Rules */
+        .rules-section {
+            background: var(--bg-page);
+            padding: 72px 0 88px;
+            border-top: 1px solid var(--border);
+        }
+
+        .rules-card {
+            max-width: 820px;
+            margin: 0 auto;
+            background: var(--card);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            padding: 40px 44px;
+            box-shadow: var(--shadow);
+        }
+
+        .rules-section .section-header {
+            margin-bottom: 40px;
+        }
+
+        .rules-list {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: grid;
+            gap: 18px;
+        }
+
+        .rules-list li {
+            position: relative;
+            padding-left: 22px;
+            color: var(--text-secondary);
+            font-size: 15px;
+            line-height: 1.65;
+        }
+
+        .rules-list li::before {
+            content: "";
+            position: absolute;
+            left: 0;
+            top: 0.55em;
+            width: 8px;
+            height: 8px;
+            border-radius: 2px;
+            background: var(--accent);
+        }
+
         /* CTA */
         .cta-section {
             background: var(--text-primary);
@@ -864,6 +912,10 @@
 
             .cta-section h2 {
                 font-size: 32px;
+            }
+
+            .rules-card {
+                padding: 28px 20px;
             }
         }
 
@@ -1047,20 +1099,20 @@
             <div class="steps-simple">
                 <div class="step-simple">
                     <div class="step-simple-number">1</div>
-                    <h3>Create Your Account</h3>
-                    <p>Sign up for a free PitchCV account at <a href="https://my.pitchcv.app/">my.pitchcv.app</a>. It takes less than a minute.</p>
+                    <h3>Accept the Invitation &amp; Create Your Account</h3>
+                    <p>Accept your partner invitation and create your PitchCV account at <a href="https://my.pitchcv.app/">my.pitchcv.app</a>. It only takes a minute.</p>
                 </div>
 
                 <div class="step-simple">
                     <div class="step-simple-number">2</div>
-                    <h3>Email Us Your Details</h3>
-                    <p>Send an email to <a href="mailto:partners@pitchcv.app">partners@pitchcv.app</a> with your registered email and a brief description of how you plan to promote PitchCV.</p>
+                    <h3>Open Invite Friends in the App</h3>
+                    <p>Inside the PitchCV app, open the <strong>Invite friends</strong> menu to reach your referral tools and partner dashboard.</p>
                 </div>
 
                 <div class="step-simple">
                     <div class="step-simple-number">3</div>
-                    <h3>Get Official Partner Status</h3>
-                    <p>We'll review and send you an invitation with your unique referral link and dashboard access.</p>
+                    <h3>Get $20 Bonus Credit</h3>
+                    <p>Receive <strong>+$20</strong> credited to your partner balance as a welcome bonus once you're set up.</p>
                 </div>
             </div>
         </div>
@@ -1395,6 +1447,28 @@
                 <div class="cta-visual">
                     <img src="Group.svg" width="383" height="367" alt="PitchCV partner program illustration">
                 </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Rules -->
+    <section class="rules-section" id="rules">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-label">Partner program</span>
+                <h2 class="section-title">Rules</h2>
+                <p class="section-description">Please read these conditions before promoting PitchCV.</p>
+            </div>
+            <div class="rules-card">
+                <ul class="rules-list">
+                    <li>Reach <strong>$350.00</strong> to unlock payouts. The minimum payout threshold is <strong>$350</strong>; payouts are <strong>manual</strong> and processed after approval.</li>
+                    <li><strong>No self-referrals.</strong> Self-referrals and coupon/deal-site traffic are <strong>prohibited</strong>.</li>
+                    <li><strong>30%</strong> applies to the <strong>first paid monthly subscription charge only</strong> (after any 7-day trial). Trialing / trial signup fees <strong>do not</strong> count.</li>
+                    <li>A <strong>one-time $20</strong> welcome credit from PitchCV is added when you join the partner program (it counts toward your payout balance).</li>
+                    <li>The <strong>attribution window</strong> is <strong>30 days</strong> from a valid referral click.</li>
+                    <li><strong>No commission</strong> for registration, trial period, or email signup alone.</li>
+                    <li><strong>One commission</strong> per invited user; duplicates are <strong>rejected</strong>.</li>
+                </ul>
             </div>
         </div>
     </section>
