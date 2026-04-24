@@ -280,24 +280,40 @@
         .site-header-inner {
             display: flex;
             align-items: center;
-            justify-content: space-between;
+            justify-content: flex-start;
             gap: 20px;
             flex-wrap: wrap;
         }
 
-        .header-promo {
-            margin: 0;
-            font-size: 14px;
-            font-weight: 500;
-            color: var(--text-secondary);
-            line-height: 1.4;
-            text-align: right;
-            max-width: 340px;
+        .site-header-brand {
+            display: inline-flex;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 10px 12px;
+            text-decoration: none;
+            width: fit-content;
         }
 
-        .header-promo strong {
-            color: var(--accent);
-            font-weight: 800;
+        .header-brand-name {
+            font-size: 20px;
+            font-weight: 700;
+            color: var(--text-primary);
+            letter-spacing: -0.01em;
+        }
+
+        .header-brand-sep {
+            width: 1px;
+            height: 22px;
+            background: #d1d4e0;
+            flex-shrink: 0;
+        }
+
+        .header-brand-program {
+            font-size: 15px;
+            font-weight: 300;
+            letter-spacing: 0.03em;
+            color: var(--text-secondary);
+            line-height: 1.2;
         }
 
         body {
@@ -1508,13 +1524,16 @@
                 justify-content: center;
             }
 
+            /* ~¼ of the balance card overlaps the bottom of the photo */
             .hero-income-card {
                 position: relative;
                 right: auto;
                 bottom: auto;
-                margin: 16px auto 0;
-                width: min(300px, 100%);
-                transform: none;
+                align-self: center;
+                width: min(300px, calc(100% - 8px));
+                max-width: 300px;
+                margin: clamp(-56px, -14vw, -40px) auto 0;
+                z-index: 5;
             }
 
             .hero-income-chart {
@@ -1531,10 +1550,6 @@
             .site-header-inner {
                 flex-direction: column;
                 align-items: flex-start;
-            }
-            .header-promo {
-                text-align: left;
-                max-width: none;
             }
 
             .cta-layout {
@@ -1586,8 +1601,8 @@
     <!-- Header -->
     <header class="site-header">
         <div class="container site-header-inner">
-            <a href="https://pitchcv.app" style="display: flex; align-items: center; gap: 12px; text-decoration: none; width: fit-content;">
-                <svg width="32" height="32" viewBox="0 0 512 512" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <a href="https://pitchcv.app" class="site-header-brand" aria-label="PitchCV.app — Partner program">
+                <svg width="32" height="32" viewBox="0 0 512 512" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
                     <g clip-path="url(#clip0)">
                         <mask id="mask0" style="mask-type:luminance" maskUnits="userSpaceOnUse" x="42" y="104" width="332" height="102">
                             <path d="M42 104H276C336 104 374 142 374 206H98L42 104Z" fill="white"/>
@@ -1621,9 +1636,10 @@
                         </clipPath>
                     </defs>
                 </svg>
-                <span style="font-size: 20px; font-weight: 700; color: var(--text-primary); letter-spacing: -0.01em;">PitchCV.app</span>
+                <span class="header-brand-name">PitchCV.app</span>
+                <span class="header-brand-sep" aria-hidden="true"></span>
+                <span class="header-brand-program">Partner program</span>
             </a>
-            <p class="header-promo">Every new partner gets <strong>+$20</strong> credited to their partner account.</p>
         </div>
     </header>
 
